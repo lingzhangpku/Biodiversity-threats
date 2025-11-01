@@ -24,14 +24,20 @@ Each IUCN threat code was matched to the corresponding sector in the Eora MRIO f
 
 Examples include: 
 - Agricultural expansion → Agriculture
-- Residential and urban development (1.1–1.2) → Construction
+- Residential and urban development → Construction
 
 This step produced a species–sector correspondence table linking biological threats with economic activities. please refer to 1_1_sector_mapping.m in MatLab code.
 
 ## 3. Estimation of spatial distribution weights
-Based on species-specific data across countries (including human footprint and land area), calculate the proportion of human activity intensity and habitat area that each country represents within a species distribution range. Please refer to 1_2_weighted_threats_calculation.m in MatLab code. 
-
+Based on species-specific data across countries (including human footprint and land area), calculate the proportion of human activity intensity and habitat area that each country represents within a species distribution range. Please refer to 1_2_weighted_threats_calculation.m in MatLab code.
 This ensures that species whose distributions span multiple countries are represented according to the relative human disturbance and habitat extent in each region.
+
+## 4. Calcultion of bioiversity threats embodied in production and trade.
+We used an environmentally extended multi-regional input–output (MRIO) model to trace the biodiversity threats embodied in international trade.
+The MRIO approach captures complete supply chain–wide transactions between sectors and regions, thereby linking production activities to final consumption across borders. 
+The biodiversity threat–based satellite account (Bio) serves as an environmental extension of the MRIO model. It quantifies the equivalent number of species threatened per unit of sectoral output, enabling the linkage between species-level threat data and the economic production network. Through integration with the Leontief inverse matrix and final demand matrix, it allows the tracing of biodiversity threats across global supply chains. All calculations were implemented in MATLAB (see 1_3_MRIO_calculation.m).
+
+
 
 
 
