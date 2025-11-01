@@ -3,7 +3,7 @@ This repo includes all codes used for biodiversity threat analysis.
 Code and Data Processing for the Paper: Mapping escalating biodiversity threats across global supply chains
 
 # Overview
-This study quantified biodiversity threats embodied in international trade by integrating species–threat information from the IUCN Red List with the Eora multi-regional input–output (MRIO) database. The entire workflow consisted of seven steps, from data acquisition to spatial visualization.
+This study quantified biodiversity threats embodied in international trade by integrating species–threat information from the IUCN Red List with the Eora multi-regional input–output (MRIO) database. The entire workflow consisted of several steps from data acquisition to spatial visualization.
 
 # Data
 All data used in this study are open accessed. 
