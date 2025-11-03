@@ -3,33 +3,14 @@ We then use the concordance table between threats and economic sectors in MRIO t
 
 We assume threat type $q$ can be caused by production of $n$ economic sectors in the MRIO tables. Outputs of the sector $i$ in country $r$ are denoted as $x_i^r$. The habitat size of species $p$ in country $r$ is $LA^r$. Human footprint with distribution range in country $r$ is $HF^r$. The threat type $q$ (measured in one unit) is allocated to sector $i$ in country $r$ via:
 
-$B_i^{q,r}= \frac {x_i^r \times \eta^r} {\sum_{s\in m}{\sum_{j \in n} {x_j^s \times \eta^s}}}$
-(Eq. 1)
+$B_i^{q,r}= \frac {x_i^r \times \eta^r} {\sum_{s\in m}{\sum_{j \in n} {x_j^s \times \eta^s}}}$  (Eq. 1)
 
 
-$
-\eta^r=
-    \frac
-        {\alpha^r \times \beta^r}
-        {\sum_{s\in m} {\alpha^s \times \beta^s}}
-$
-(Eq. 2)
+$\eta^r= \frac {\alpha^r \times \beta^r} {\sum_{s\in m}{\alpha^s \times \beta^s}}$  (Eq. 2)
 
-$
-\alpha^r=
-    \frac
-        {LA^r}
-        {\sum_{s\in m} {LA^s}}
-$
-(Eq. 3)
+$\alpha^r= \frac {LA^r} {\sum_{s\in m} {LA^s}}$ (Eq. 3)
 
-$
-\beta^r=
-    \frac
-        {HF^r}
-        {\sum_{s\in m} {HF^s}}
-$
-(Eq. 4)
+$\beta^r=\frac {HF^r} {\sum_{s\in m} {HF^s}}$   (Eq. 4)
 
 where $B_i^{q,r}$ is weighted threats allocated to production of sector $i$ in country $r$. $\eta^r$ is allocation fraction of country $r$ calculated based on $LA^r$ and $HF^r$. $\alpha^r$ is the share of habitat size in country $r$ in total habitat sizes of all $m$ countries. $\beta^r$ is the share of human footprints in country $r$ in total human footprints of all $m$ countries. We still use Eq. 1 to allocate climate-related threats across sectors and countries but rely on sector-level greenhouse gas emissions instead of total outputs. Lastly, we normalize h threats with same weights and construct only one row vector for species $p$ in the satellite account for MRIO modelling.
 
@@ -42,7 +23,7 @@ Here is an example to show satellite calculation progress. We assume:
 The country-level adjustment coefficient is derived from the species’ habitat preference and human footprint intensity, normalized across countries for the species. The sectoral-level adjustment coefficients, reflecting the economic or climate influence of threats, are based on two inputs: sectoral gross outputs ($x$, in USD) or sectoral greenhouse gas emissions ($E$ in Mt CO₂). Both are row-normalized for each threat type, and the resulting coefficients are used to allocate threat intensity across sectors.
 
 
-{: .note }
+
 >  **(a) Link the species A’s threats with industrial sectors.** * value ‘1’ means that the production of column sector causes the row threat.
 >  
 |Species A|Distributed Countries and Related Sectors||||||||||||
@@ -60,7 +41,7 @@ The country-level adjustment coefficient is derived from the species’ habitat 
 |**Human interaction ($HF$, in human footprint)**|5||||15||||30||||
 
 
-{: .note }
+
 >  **(b) Attribute each threat causes extent by gross industrial output / GHG emissions and the construction of country-level adjustment coefficients.**
 >  
 |Species A|Distributed Countries and Related Sectors|||||||||||||
@@ -81,7 +62,7 @@ The country-level adjustment coefficient is derived from the species’ habitat 
 |**Share of human footprint ($\beta$)**|0.1||||0.3||||0.6||||**1**|
 |**Allocation fraction ($\eta$)**|0.03||||0.38||||0.6||||**1**|
 
-{: .note }
+
 >  **(c) Calculation weighted threats and satellite accounts of species A.**
 >  
 |Species A|Distributed Countries and Related Sectors|||||||||||||
