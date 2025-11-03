@@ -3,37 +3,37 @@ We then use the concordance table between threats and economic sectors in MRIO t
 
 We assume threat type $q$ can be caused by production of $n$ economic sectors in the MRIO tables. Outputs of the sector $i$ in country $r$ are denoted as $x_i^r$. The habitat size of species $p$ in country $r$ is $LA^r$. Human footprint with distribution range in country $r$ is $HF^r$. The threat type $q$ (measured in one unit) is allocated to sector $i$ in country $r$ via:
 
-$$
+$
 B_i^{q,r}=
     \frac
         {x_i^r \times \eta^r}
         {\sum_{s\in m} {\sum_{j \in n} {x_j^s \times \eta^s}}}
-$$
+$
 (Eq. 1)
 
 
-$$
+$
 \eta^r=
     \frac
         {\alpha^r \times \beta^r}
         {\sum_{s\in m} {\alpha^s \times \beta^s}}
-$$
+$
 (Eq. 2)
 
-$$
+$
 \alpha^r=
     \frac
         {LA^r}
         {\sum_{s\in m} {LA^s}}
-$$
+$
 (Eq. 3)
 
-$$
+$
 \beta^r=
     \frac
         {HF^r}
         {\sum_{s\in m} {HF^s}}
-$$
+$
 (Eq. 4)
 
 where $B_i^{q,r}$ is weighted threats allocated to production of sector $i$ in country $r$. $\eta^r$ is allocation fraction of country $r$ calculated based on $LA^r$ and $HF^r$. $\alpha^r$ is the share of habitat size in country $r$ in total habitat sizes of all $m$ countries. $\beta^r$ is the share of human footprints in country $r$ in total human footprints of all $m$ countries. We still use Eq. 1 to allocate climate-related threats across sectors and countries but rely on sector-level greenhouse gas emissions instead of total outputs. Lastly, we normalize h threats with same weights and construct only one row vector for species $p$ in the satellite account for MRIO modelling.
