@@ -3,12 +3,7 @@ We then use the concordance table between threats and economic sectors in MRIO t
 
 We assume threat type $q$ can be caused by production of $n$ economic sectors in the MRIO tables. Outputs of the sector $i$ in country $r$ are denoted as $x_i^r$. The habitat size of species $p$ in country $r$ is $LA^r$. Human footprint with distribution range in country $r$ is $HF^r$. The threat type $q$ (measured in one unit) is allocated to sector $i$ in country $r$ via:
 
-$
-B_i^{q,r}=
-    \frac
-        {x_i^r \times \eta^r}
-        {\sum_{s\in m} {\sum_{j \in n} {x_j^s \times \eta^s}}}
-$
+$B_i^{q,r}= \frac {x_i^r \times \eta^r} {\sum_{s\in m}{\sum_{j \in n} {x_j^s \times \eta^s}}}$
 (Eq. 1)
 
 
