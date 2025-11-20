@@ -1,4 +1,12 @@
-%% === Input data: Z (intermediate flows) and X (total output) for two periods ===
+% To quantify the drivers of changes in threatened species embodied in global production and trade, we apply a four-factor Structural Decomposition Analysis (SDA) based on the standard MRIO identity 
+% T=FLY. In this framework, total biodiversity threats associated with economic activities are determined by:
+% (1) the threatened-species intensity of production (𝐹),
+% (2) the production structure and inter-industry linkages represented by the Leontief inverse (L)
+% (3) the level and composition of per-capita final demand (S), and
+% (4) population scale (P).
+
+
+%% === Input data ===
 
 reg_num = 186;
 s_num = 26;
@@ -21,7 +29,7 @@ end
 Y0_reg = Y0 * sum_mat_y;
 Y1_reg = Y1 * sum_mat_y;
 
-% Environmental extensions (from SDA_Bio)
+% Environmental extensions (from satellite account)
 F0 = pre2010_bio;     % Threatened species intensity coefficients, pre-2010
 F1 = post2010_bio;    % Threatened species intensity coefficients, post-2010
 
